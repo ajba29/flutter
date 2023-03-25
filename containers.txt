@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.lightBlue,
+        body: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    color: Colors. pinkAccent,
+                    child: Text('Container 1'),
+                  ),// the box
+                ),// expands the container to its maximum
+                SizedBox(
+                  height: 20.0,
+                ),//used as spacing
+                Expanded(
+                  child: Container(
+                      color: Colors. yellowAccent,
+                      child: Text('Container 2')
+                  ),
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                Expanded(
+                  child: Container(
+                      color: Colors. greenAccent,
+                      child: Text('Container 3')
+                  ),
+                ),
+              ],
+            ),
+        ),
+      )
+    );
+  }
+}
+
